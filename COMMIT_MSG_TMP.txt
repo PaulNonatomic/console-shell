@@ -1,0 +1,23 @@
+refactor!: split into console-shell (this) and console-adventure (sibling)
+
+Drops the adventure engine, share intent builders, and foundry
+example out of this package. They've moved to a sibling repo
+at github.com/PaulNonatomic/console-adventure where they belong
+on their own — the engine doesn't really care about the dev
+console, and the shell has a much wider audience without a
+game bolted on.
+
+What remains here is a focused, standalone library:
+  - createShell(config)  → window-namespaced CLI surface
+  - banner + theme + commands + auto help screen
+  - structural ShellPlugin extension point so adventure (or
+    any other plugin) can attach via attachTo(shell)
+
+Net effect on bundle: 12KB ESM → 4KB ESM.
+
+Package metadata renamed from "console-quest" to "console-shell";
+GitHub repo renamed in place so git history (and the existing
+single commit) is preserved. The companion console-adventure
+repo is fresh.
+
+Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>

@@ -1,25 +1,24 @@
 {
-	"name": "console-quest",
+	"name": "console-shell",
 	"version": "0.1.0",
-	"description": "Brand-styled developer-console shells and branching text adventures for the web. Hide a CLI in your dev tools.",
+	"description": "Hide a styled CLI inside your site's developer console. Banner, window namespace, themed help, zero deps.",
 	"keywords": [
 		"console",
 		"easter-egg",
-		"text-adventure",
-		"interactive-fiction",
 		"dev-tools",
 		"cli",
-		"branding"
+		"branding",
+		"developer-experience"
 	],
 	"author": "Paul Stamp <paul@nonatomic.co.uk> (https://nonatomic.co.uk)",
 	"license": "MIT",
-	"homepage": "https://github.com/PaulNonatomic/console-quest",
+	"homepage": "https://github.com/PaulNonatomic/console-shell",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/PaulNonatomic/console-quest.git"
+		"url": "git+https://github.com/PaulNonatomic/console-shell.git"
 	},
 	"bugs": {
-		"url": "https://github.com/PaulNonatomic/console-quest/issues"
+		"url": "https://github.com/PaulNonatomic/console-shell/issues"
 	},
 	"type": "module",
 	"main": "./dist/index.cjs",

@@ -10,15 +10,27 @@ Initial release.
 
 ### Added
 
-- `createShell(config)` — window-namespaced developer-console CLI surface with
-  banner, themed help screen, and pluggable analytics hook.
-- `createAdventure(config)` — branching scene-graph text adventure that prints
-  to `console.log`, driven by `.choose(n)` calls. Supports optional scoring,
-  tier resolution, and a share intent that opens after the game finishes.
+- `createShell(config)` — window-namespaced developer-console CLI surface
+  with banner, themed help screen, structural `ShellPlugin` extension point,
+  and pluggable analytics hook. Freezes the namespace after install so the
+  curious dev can't accidentally clobber commands.
 - `DEFAULT_THEME` + `resolveTheme(partial)` — phosphor-on-void palette with
   shallow-merge override.
-- Share-intent builders for X (Twitter), Mastodon, and Bluesky. Consumers can
-  supply their own for other platforms.
-- Examples: a minimal shell and a full Foundry-style adventure.
-- vitest test suite covering theme resolution, shell install/attach behaviour,
-  full playthroughs, branching scoring (DFS), and share intent generation.
+- Type exports for `Theme`, `Banner`, `Command`, `ShellConfig`, `ShellLogger`,
+  `Shell`, `ShellPlugin`.
+- Example: a minimal shell with two custom commands.
+- vitest test suite covering theme resolution, shell install/attach behaviour
+  (idempotency, frozen namespace, banner-or-not, plugin extension).
+
+### Notes
+
+This package began life as `console-quest`, which combined a console shell
+with a branching text-adventure engine. The two halves were split in this
+release so each can stand on its own:
+
+- `console-shell` (this package) — standalone CLI shell.
+- [`console-adventure`](https://github.com/PaulNonatomic/console-adventure) —
+  branching scene-graph text adventure that optionally plugs into the shell.
+
+The full git history of the shell code is preserved here; `console-quest` was
+renamed in place.

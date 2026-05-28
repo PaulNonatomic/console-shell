@@ -1,33 +1,26 @@
 /**
- * console-quest — brand-styled developer-console shells and
- * branching text adventures for the web.
+ * console-shell — hide a styled CLI inside your site's
+ * developer console.
  *
  * Public API:
  *   - `createShell(config)`       — window-namespaced CLI surface
- *   - `createAdventure(config)`   — branching scene-graph game
  *   - `DEFAULT_THEME`             — phosphor-on-void palette
  *   - `resolveTheme(partial)`     — merge a partial over defaults
- *   - Share intent builders for X / Mastodon / Bluesky
  *
- * Types (Theme, Banner, Command, Scene, Choice, Tier, …) are
+ * Types (Theme, Banner, Command, ShellConfig, ShellLogger) are
  * re-exported as type-only so consumers can declare configs
  * with full IDE support without the runtime cost of importing
  * the implementation modules.
+ *
+ * Looking for a branching text-adventure engine that plugs
+ * into this shell? See the companion package
+ * `console-adventure`.
  */
 
 export { createShell } from './shell.js';
 export type { Shell, ShellPlugin } from './shell.js';
 
-export { createAdventure } from './adventure.js';
-export type { Adventure } from './adventure.js';
-
 export { DEFAULT_THEME, resolveTheme } from './theme.js';
-
-export {
-	buildXIntent,
-	buildMastodonIntent,
-	buildBlueskyIntent
-} from './share.js';
 
 export type {
 	Theme,
@@ -35,10 +28,5 @@ export type {
 	Banner,
 	Command,
 	ShellConfig,
-	ShellLogger,
-	Choice,
-	Scene,
-	Tier,
-	ShareConfig,
-	AdventureConfig
+	ShellLogger
 } from './types.js';
