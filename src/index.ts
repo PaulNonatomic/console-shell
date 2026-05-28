@@ -22,6 +22,14 @@ export type { Shell, ShellPlugin } from './shell.js';
 
 export { DEFAULT_THEME, resolveTheme } from './theme.js';
 
+// Style helpers — public so consumers (and downstream
+// libraries like console-adventure) can build their own
+// styled console.log calls in the shell's theme without
+// re-implementing the small CSS-string builders. Banner /
+// wordmark styles are intentionally not exported (banner.ts
+// owns the banner-rendering contract).
+export { colorFor, styleFor, styleBoldFor } from './style.js';
+
 export type {
 	Theme,
 	ThemeColor,
