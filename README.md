@@ -152,6 +152,8 @@ shell.install();
 
 You can use either package on its own — `console-shell` for a pure easter egg, `console-adventure` for a game that drives its own UI without dev-console wrapping.
 
+> **No mutual dependency.** Neither package imports from the other; both ship with `"dependencies": {}`. They meet at a shared structural type — `ShellPlugin` here in console-shell, `ShellLike` over in console-adventure — that describes the contract without binding the implementations together. Anyone could write a third plugin (a debug REPL, an in-page tutorial, a quest engine in a different language) that satisfies the same interface and attaches to this shell with no upstream changes.
+
 ---
 
 ## Example
