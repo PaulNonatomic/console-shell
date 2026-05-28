@@ -7,7 +7,7 @@
  *   - `DEFAULT_THEME`             — phosphor-on-void palette
  *   - `resolveTheme(partial)`     — merge a partial over defaults
  *
- * Types (Theme, Banner, Command, ShellConfig, ShellLogger) are
+ * Types (Theme, Banner, Command, ShellConfig, Logger) are
  * re-exported as type-only so consumers can declare configs
  * with full IDE support without the runtime cost of importing
  * the implementation modules.
@@ -36,5 +36,5 @@ export type {
 	Banner,
 	Command,
 	ShellConfig,
-	ShellLogger
+	Logger
 } from './types.js';
