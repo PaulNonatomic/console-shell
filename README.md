@@ -11,11 +11,6 @@
 
 </div>
 
-## Support
-If you like my work then please consider showing your support for console-shell by giving the repo a star or buying me a brew
-<br><br>
-<a href="https://www.buymeacoffee.com/nonatomic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
 ## Why
 
 You spent months on a site. A handful of visitors will open dev tools. That handful are often the ones you most want to impress — other devs, recruiters, potential collaborators. Reward them with something more than minified JavaScript.
@@ -175,6 +170,13 @@ npm run build      # tsup → dist/
 ```
 
 Tests run in jsdom. The library is browser-only at runtime (it touches `window`) but the test harness stubs the logger so tests don't pollute stdout.
+
+---
+
+## Support
+If you like my work then please consider showing your support for console-shell by giving the repo a star or buying me a brew
+<br><br>
+<a href="https://www.buymeacoffee.com/nonatomic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ---
 
