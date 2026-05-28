@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>console-quest · minimal shell example</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<style>
+			html,
+			body {
+				margin: 0;
+				padding: 0;
+				min-height: 100vh;
+				font-family: ui-monospace, 'JetBrains Mono', Menlo, Consolas, monospace;
+				background: #0a0a0f;
+				color: #eef0f5;
+				display: grid;
+				place-items: center;
+			}
+			main {
+				padding: 32px;
+				text-align: center;
+				max-width: 640px;
+			}
+			h1 {
+				color: #c7f441;
+				font-size: 24px;
+				margin: 0 0 8px;
+			}
+			p {
+				color: #909090;
+				line-height: 1.6;
+				font-size: 14px;
+			}
+			code {
+				color: #c7f441;
+				background: rgba(199, 244, 65, 0.08);
+				padding: 2px 6px;
+				border-radius: 3px;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h1>console-quest · minimal example</h1>
+			<p>
+				Open your browser dev tools (<code>F12</code> or
+				<code>Cmd&nbsp;⌥&nbsp;I</code>) and try
+				<code>demo.help()</code>.
+			</p>
+		</main>
+		<!--
+			This example imports console-quest from a relative
+			path so it works straight out of the cloned repo
+			without an install step. For a real project install
+			with `npm install console-quest` and import from the
+			package name instead.
+		-->
+		<script type="module">
+			import { createShell } from '../../src/index.ts';
+
+			const shell = createShell({
+				namespace: 'demo',
+				banner: {
+					wordmark: 'D E M O',
+					tagline: 'A minimal console-quest shell.',
+					hint: 'try demo.help()'
+				},
+				commands: {
+					about: {
+						description: 'who we are',
+						color: 'primary',
+						run: () => {
+							console.log(
+								'%c   Built with console-quest.',
+								'color: #C7F441; font-family: monospace;'
+							);
+						}
+					},
+					site: {
+						description: 'open the homepage',
+						color: 'info',
+						run: () => window.open('https://example.com', '_blank')
+					}
+				}
+			});
+
+			shell.install();
+		</script>
+	</body>
+</html>
