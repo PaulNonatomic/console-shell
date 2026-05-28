@@ -1,6 +1,6 @@
 {
 	"name": "console-shell",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "Hide a styled CLI inside your site's developer console. Banner, window namespace, themed help, zero deps.",
 	"keywords": [
 		"console",

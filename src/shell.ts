@@ -84,7 +84,7 @@ export function createShell(config: ShellConfig): Shell {
 	function registerCommand(name: string, command: Command): void {
 		if (installed) {
 			logger.log(
-				`%c   [console-quest] command "${name}" registered after install — ignored.`,
+				`%c   [console-shell] command "${name}" registered after install — ignored.`,
 				styleFor(theme, 'dim')
 			);
 			return;
