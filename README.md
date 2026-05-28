@@ -5,8 +5,11 @@
 `console-shell` lets you ship a tiny CLI inside your site's browser console — a styled banner, a `window.yourbrand` namespace with custom commands, and an auto-generated colour-coded help screen. Curious devs who open dev tools find it; the rest of the world never sees it.
 
 [![CI](https://github.com/PaulNonatomic/console-shell/actions/workflows/ci.yml/badge.svg)](https://github.com/PaulNonatomic/console-shell/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/console-shell.svg)](https://www.npmjs.com/package/console-shell)
-[![license](https://img.shields.io/npm/l/console-shell.svg)](./LICENSE)
+[![license: MIT](https://img.shields.io/badge/license-MIT-c7f441.svg)](./LICENSE)
+
+<!-- npm badge will appear here once the package is published. -->
+<!-- [![npm](https://img.shields.io/npm/v/console-shell.svg)](https://www.npmjs.com/package/console-shell) -->
+
 
 ---
 
