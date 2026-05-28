@@ -1,21 +1,20 @@
-# console-shell
+<div align="center">
 
-> Hide a styled CLI inside your site's developer console. Banner, window namespace, themed help, zero deps.
+### Hide a styled CLI inside your site's developer console.
 
 `console-shell` lets you ship a tiny CLI inside your site's browser console — a styled banner, a `window.yourbrand` namespace with custom commands, and an auto-generated colour-coded help screen. Curious devs who open dev tools find it; the rest of the world never sees it.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PullRequests](https://img.shields.io/badge/PRs-welcome-blueviolet)](http://makeapullrequest.com)
+[![Releases](https://img.shields.io/github/v/release/PaulNonatomic/console-shell)](https://github.com/PaulNonatomic/console-shell/releases)
 [![CI](https://github.com/PaulNonatomic/console-shell/actions/workflows/ci.yml/badge.svg)](https://github.com/PaulNonatomic/console-shell/actions/workflows/ci.yml)
-[![license: MIT](https://img.shields.io/badge/license-MIT-c7f441.svg)](./LICENSE)
 
-<!-- npm badge will appear here once the package is published. -->
-<!-- [![npm](https://img.shields.io/npm/v/console-shell.svg)](https://www.npmjs.com/package/console-shell) -->
+</div>
 
 ## Support
 If you like my work then please consider showing your support for console-shell by giving the repo a star or buying me a brew
 <br><br>
 <a href="https://www.buymeacoffee.com/nonatomic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
----
 
 ## Why
 
