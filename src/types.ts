@@ -123,13 +123,13 @@ export interface ShellConfig {
 	 * Optional logger override. Defaults to `globalThis.console`.
 	 * Tests pass a stub here to capture output.
 	 */
-	logger?: ShellLogger;
+	logger?: Logger;
 }
 
 /**
  * Minimal logger contract — the runtime only ever calls
  * `.log(message, ...styles)`. `console` satisfies this directly.
  */
-export interface ShellLogger {
+export interface Logger {
 	log: (message: string, ...styles: string[]) => void;
 }

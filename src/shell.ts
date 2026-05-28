@@ -18,7 +18,7 @@ import type {
 	ShellConfig,
 	Theme,
 	Command,
-	ShellLogger,
+	Logger,
 	ThemeColor
 } from './types.js';
 import { resolveTheme } from './theme.js';
@@ -32,7 +32,7 @@ export interface Shell {
 	/** Resolved (merged-with-defaults) theme. */
 	readonly theme: Theme;
 	/** Underlying logger (default: real console). */
-	readonly logger: ShellLogger;
+	readonly logger: Logger;
 	/**
 	 * Register a command. Must be called before `install()`;
 	 * registering after install logs a warning and is a no-op

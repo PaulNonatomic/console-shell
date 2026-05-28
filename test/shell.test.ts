@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { createShell } from '../src/shell.js';
-import type { ShellLogger } from '../src/types.js';
+import type { Logger } from '../src/types.js';
 
 /**
  * Capturing logger — records every `.log(message, ...styles)`
@@ -8,11 +8,11 @@ import type { ShellLogger } from '../src/types.js';
  * console.log without polluting the test runner's stdout.
  */
 function createCapturingLogger(): {
-	logger: ShellLogger;
+	logger: Logger;
 	calls: Array<{ message: string; styles: string[] }>;
 } {
 	const calls: Array<{ message: string; styles: string[] }> = [];
-	const logger: ShellLogger = {
+	const logger: Logger = {
 		log: (message: string, ...styles: string[]) => {
 			calls.push({ message, styles });
 		}

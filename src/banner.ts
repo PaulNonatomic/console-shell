@@ -5,7 +5,7 @@
  * layer — `printBanner({}, theme, logger)` prints nothing but
  * doesn't error.
  */
-import type { Banner, Theme, ShellLogger } from './types.js';
+import type { Banner, Theme, Logger } from './types.js';
 import {
 	styleBanner,
 	styleWordmark,
@@ -17,7 +17,7 @@ import { blank } from './log.js';
 export function printBanner(
 	banner: Banner | undefined,
 	theme: Theme,
-	logger: ShellLogger
+	logger: Logger
 ): void {
 	if (!banner) return;
 
@@ -60,7 +60,7 @@ export function printBanner(
  * it from inside its intro without re-implementing the style.
  */
 export function printCta(
-	logger: ShellLogger,
+	logger: Logger,
 	theme: Theme,
 	text: string
 ): void {

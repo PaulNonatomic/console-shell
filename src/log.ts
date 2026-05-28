@@ -1,13 +1,13 @@
 /**
  * Logger helpers — thin wrappers around the consumer-supplied
- * (or default) `ShellLogger`. Centralising the call sites means
+ * (or default) `Logger`. Centralising the call sites means
  * tests can swap in a capturing logger and assert against
  * exactly what would have hit `console.log`.
  */
-import type { ShellLogger } from './types.js';
+import type { Logger } from './types.js';
 
 /** Default logger — uses the real `console`. */
-export const realLogger: ShellLogger = {
+export const realLogger: Logger = {
 	log: (message: string, ...styles: string[]) => {
 		// eslint-disable-next-line no-console
 		console.log(message, ...styles);
@@ -19,7 +19,7 @@ export const realLogger: ShellLogger = {
  * indent the library uses for all output. The leading `%c`
  * applies the style to the whole indented line.
  */
-export function logLine(logger: ShellLogger, text: string, style: string): void {
+export function logLine(logger: Logger, text: string, style: string): void {
 	logger.log(`%c   ${text}`, style);
 }
 
@@ -28,7 +28,7 @@ export function logLine(logger: ShellLogger, text: string, style: string): void 
  * obvious at the call site (`blank(logger)` vs the bare
  * `logger.log('')`).
  */
-export function blank(logger: ShellLogger): void {
+export function blank(logger: Logger): void {
 	logger.log('');
 }
 
@@ -39,7 +39,7 @@ export function blank(logger: ShellLogger): void {
  * callout (marker in accent, body in text).
  */
 export function logTwo(
-	logger: ShellLogger,
+	logger: Logger,
 	leftText: string,
 	leftStyle: string,
 	rightText: string,
